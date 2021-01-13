@@ -1,0 +1,20 @@
+<section>
+    <div id="features" class="text-center">
+        <div class="container">
+            <div class="section-title">
+                <h2>Від шефа</h2>
+            </div>
+            <div class="row">
+                {% for item in special_menu %}
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="features-item">
+                            <h3>{{ item.title }}</h3>
+                            <img src={{ item.photo.url }}  class="img-responsive" alt="">
+                            <p>{{ item.description }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

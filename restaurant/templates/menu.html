@@ -1,0 +1,23 @@
+<section id="restaurant-menu">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Меню</h2>
+            </div>
+            <div class="row">
+                {% for item in categories %}
+                <div class="col-xs-12 col-sm-6">
+                    <div class="menu-section">
+                        <h2 class="menu-section-title">{{ item.title }}</h2>
+                        {% for dish in item.dishes %}
+                            <div class="menu-item">
+                                <div class="menu-item-name"><a href="/menu/{{ dish.id }}/">{{ dish.title }}</a></div>
+                                <div class="menu-item-price"> &#8372; {{ dish.price }}</div>
+                                <div class="menu-item-description"> {{ dish.description }} </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+</section>
